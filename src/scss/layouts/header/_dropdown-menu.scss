@@ -1,0 +1,181 @@
+body[data-screen="ltr"] {
+
+  .nav-dropdown-av {
+
+    .dropdown-menu-av {
+
+      position: absolute;
+      left: 0;
+      bottom: -390px;
+      background-color: $white;
+      width: 100%;
+      padding: 1em 0;
+      border-bottom: 1px solid $grey;
+      transform: translateX(-100%);
+      transition: all 0.55s ease;
+      z-index: -1;
+      opacity: 0;
+
+      @media screen and (max-width: 1200px){
+
+        bottom: -740px;
+
+      }
+
+      &.active {
+
+        transform: translateX(0px);
+        opacity: 1;
+        z-index: 2;
+
+      }
+
+    }
+
+    .dropdown-menu-header {
+
+      display: none;
+
+    }
+
+  }
+
+}
+
+$header: 114.53px;
+
+body[data-screen="mobile"] {
+
+  .nav-dropdown-av {
+
+    .dropdown-menu-av {
+
+      position: fixed;
+      top: $header;
+      left: 0;
+      height: calc(100vh - #{$header});
+      overflow-y: scroll;
+      background-color: #fff;
+      z-index: 2;
+      padding: 25px 0;
+      transform: translateX(-100%);
+      transition: all 0.55s ease;
+      opacity: 0;
+
+      &.active {
+
+        transform: translateX(0px);
+        opacity: 1;
+
+      }
+
+    }
+
+  }
+
+  .nav-dropdown-toggle {
+
+    @include flexVCenter;
+    justify-content: space-between;
+
+  }
+
+  .dropdown-menu-header {
+
+    @include flexVCenter;
+    justify-content: space-between;
+    margin-bottom: 1.2em;
+
+  }
+
+}
+
+.dropdown-collection-link {
+
+  display: block;
+  position: relative;
+  width: auto;
+  height: 200px;
+  overflow: hidden;
+
+  &:hover {
+
+    .dropdown-collection-item {
+
+      transform: scale(1.1);
+
+    }
+
+    .collection-title {
+
+      letter-spacing: 5px;
+
+    }
+
+  }
+
+  .dropdown-collection-item {
+
+    height: 200px;
+    background-size: cover;
+    transition: all .3s;
+
+  }
+
+  .collection-title {
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    font-family: $fontMain;
+    font-size: .9em;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, .5);
+    transition: all .3s;
+
+  }
+
+}
+
+.collection-item-content {
+
+  margin-bottom: 1em;
+
+  ul {
+
+    margin-top: 15px;
+
+    li {
+
+      margin: 3px 0;
+
+      a {
+
+        color: #2F2F2F;
+        font-size: .7em;
+        font-weight: 500;
+
+      }
+
+      &:last-of-type a {
+
+        display: block;
+        padding-top: 10px;
+        color: $black;
+        font-weight: 600;
+
+      }
+
+    }
+
+  }
+
+}

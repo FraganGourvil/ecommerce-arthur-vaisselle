@@ -1,0 +1,259 @@
+.slideshow {
+
+  height: calc(100vh - 118px);
+  background-color: $black;
+
+  .slideshow-content {
+
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh - 118px);
+
+    .slideshow-item {
+
+      position: relative;
+      height: 100%;
+      display: none;
+
+      &.active {
+
+        display: block;
+
+      }
+
+      &.closing {
+
+        .slideshow-item-title,
+        .slideshow-item-description{
+
+          h3, h5, p, a {
+
+            animation: fadeOutBottom .5s;
+
+          }
+
+
+        }
+
+        .slideshow-item-image {
+
+          animation: fadeOutLeft .5s;
+
+        }
+
+      }
+
+      .slideshow-item-image {
+
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        filter: brightness(40%);
+
+        animation: fadeInRight .5s;
+
+        @media (max-width: 568px) {
+
+          top: 0;
+          left: -10px;
+          width: 100%;
+          height: auto;
+
+        }
+
+      }
+
+      .slideshow-item-title {
+
+        position: relative;
+        left: 0;
+        padding: 25px;
+        display: inline-block;
+        overflow: hidden;
+        top: 20%;
+
+        h3 {
+
+          font-size: 7em;
+          font-weight: 900;
+          font-family: 'Lora', serif;
+          color: $white;
+          animation: fadeInTop .5s;
+
+          @media screen and (max-width: 368px){
+
+            font-size: 4.8em;
+
+          }
+
+        }
+
+      }
+
+      .slideshow-item-description {
+
+        position: absolute;
+        right: 0;
+        display: inline-block;
+        max-width: 1000px;
+        overflow: hidden;
+        top: 45%;
+
+        @media screen and (max-width: 520px){
+
+          top: 40%;
+
+        }
+
+        a {
+
+          display: inline-block;
+          margin: 40px;
+          animation: fadeInTop .5s;
+          transform: scale(1.2);
+
+        }
+
+        h5,
+        p{
+
+          animation: fadeInTop .5s;
+          padding: 0 25px;
+
+        }
+
+        h5 {
+
+          font-size: 3em;
+          color: $white;
+
+          @media (max-width: 568px) {
+
+            font-size: 1.5em;
+
+          }
+
+        }
+
+        p {
+
+          margin: 0;
+          color: $dgrey;
+          font-family: 'Open Sans', sans-serif;
+          line-height: 30px;
+          font-size: 1.6em;
+
+          @media (max-width: 568px) {
+
+            font-size: 1em;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .slideshow-controls {
+
+      position: absolute;
+      bottom: 25px;
+      right: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      @media (max-width: 1100px) {
+
+        width: 100%;
+        left: 0;
+        bottom: 5px;
+        justify-content: center;
+
+      }
+
+      .slideshow-control {
+
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        background-color: #909090;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: all .3s;
+
+        &.active {
+
+          background-color: $white;
+          transform: rotate(45deg);
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+@keyframes fadeOutBottom {
+
+  0% {
+
+    transform: translateY(0);
+
+  }
+  100% {
+
+    transform: translateY(300px);
+
+  }
+
+}
+
+@keyframes fadeInTop {
+
+  0% {
+
+    transform: translateY(200px);
+
+  }
+  100% {
+
+    transform: translateY(0px);
+
+  }
+
+}
+
+@keyframes fadeInRight {
+
+  0% {
+
+    transform: translateX(-900px);
+
+  }
+  100% {
+
+    transform: translateX(0px);
+
+  }
+
+}
+
+@keyframes fadeOutLeft {
+
+  0% {
+
+    transform: translateX(0px);
+
+  }
+  100% {
+
+    transform: translateX(-900px);
+
+  }
+
+}

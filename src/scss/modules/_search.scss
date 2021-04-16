@@ -1,0 +1,78 @@
+.blur-background {
+
+  $offset: 118px;
+  $offsetIpad: 160px;
+  $offsetMobile: 170px;
+
+  z-index: 500;
+  position: fixed;
+  height: calc(100vh - #{$offset});
+  width: 100vw;
+  top: $offset;
+  left: 0;
+  background-color: rgba(0, 0, 0, .80);
+  backdrop-filter: blur(2px);
+  transition: .2s;
+
+  @media screen and (max-width: 1100px) {
+
+    top: $offsetIpad;
+    height: calc(100vh - #{$offsetIpad});
+
+  }
+
+  @media screen and (max-width: 768px) {
+
+    top: $offsetMobile;
+    height: calc(100vh - #{$offsetMobile});
+
+  }
+
+}
+
+.app-search-results {
+
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  background-color: $white;
+  width: 100%;
+  top: 54px;
+
+  @media screen and (max-width: 1100px) {
+
+    top: 52px;
+
+  }
+
+  .search-result-category,
+  .search-result-item {
+
+    padding: 6px 12px;
+
+  }
+
+  .search-result-category {
+
+    @include fontStyle(true, 500);
+    background-color: $grey;
+    color: $black;
+
+  }
+
+  .search-result-item {
+
+    @include flexVCenter;
+    justify-content: space-between;
+    text-transform: initial;
+    color: $blue;
+
+    &:not(:last-of-type) {
+
+      border-bottom: 1px solid $grey;
+
+    }
+
+  }
+
+}

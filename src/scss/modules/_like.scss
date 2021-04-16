@@ -1,0 +1,29 @@
+.likes-av {
+
+  @include flexVCenter;
+  justify-content: flex-start;
+
+  .likes-stars-av {
+
+    i {
+
+      color: $gold;
+
+      &.unlike {
+
+        color: $grey;
+
+      }
+
+    }
+
+  }
+
+  small {
+
+    margin-left: 10px;
+    margin-top: 4px;
+
+  }
+
+}

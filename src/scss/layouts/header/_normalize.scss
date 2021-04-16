@@ -1,0 +1,21 @@
+header {
+
+  .nav-tools,
+  .nav-menu,
+  .navbar-nav-header{
+
+    position: relative;
+    background-color: $white;
+    @include fontStyle(true, 600);
+    font-family: $fontMain;
+    border-bottom: 1px solid $grey;
+
+  }
+
+  ul {
+
+    list-style-type: none;
+
+  }
+
+}

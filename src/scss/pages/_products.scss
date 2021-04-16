@@ -1,0 +1,248 @@
+.listing-filters-av {
+
+  margin-top: 2em;
+
+  $margin: .8em;
+
+  .filters-list-av {
+
+    margin-top: ($margin * 2);
+
+    .filter-title {
+
+      @include flexVCenter;
+      justify-content: space-between;
+      @include fontStyle(true, 700);
+      cursor: pointer;
+
+      i {
+
+        transition: .2s ease;
+
+        &.close-av {
+
+          transform: rotate(-90deg);
+
+        }
+
+      }
+
+    }
+
+    ul {
+
+      list-style-type: none;
+      margin-top: 1em;
+      padding-bottom: $margin;
+      border-bottom: 1px solid $grey;
+      display: none;
+
+      &.active {
+
+        display: block;
+
+      }
+
+      li {
+
+        display: block;
+        margin: $margin 0;
+        font-size: .9em;
+
+      }
+
+      .filter-item {
+
+        color: $dgrey;
+
+        label {
+
+          color: $dgrey;
+
+        }
+
+        input {
+
+          margin-right: ($margin / 2);
+          margin-top: 1px;
+
+        }
+
+        &:hover {
+
+          a {
+
+            text-decoration: none;
+            color: $black;
+
+          }
+
+        }
+
+        &.active {
+
+          color: $black;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| PRODUCT CARD SCSS
+|--------------------------------------------------------------------------
+*/
+
+.product-av {
+
+  margin-bottom: 2em;
+
+  .product-av-img {
+
+    overflow: hidden;
+    position: relative;
+
+    img {
+
+      transition: all .3s ease;
+
+    }
+
+    .product-av-show {
+
+      @include flexVCenter;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      width: 100%;
+      height: 100%;
+      color: $white;
+      text-align: center;
+      line-height: 100%;
+      z-index: 5;
+      opacity: 0;
+      transition: all .35s ease;
+      font-size: 2em;
+
+    }
+
+  }
+
+  &:hover {
+
+    .product-av-img {
+
+      img {
+
+        transform: scale(1.3);
+
+      }
+
+      .product-av-show {
+
+        opacity: 1;
+
+      }
+
+    }
+
+  }
+
+  @media screen and (max-width: 992px){
+
+    margin-top: 2em;
+
+  }
+
+  .product-av-header {
+
+    padding-bottom: .5em;
+    border-bottom: 1px solid $grey;
+
+  }
+
+  .product-av-footer {
+
+    @include flexVCenter;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1em;
+
+    .product-av-price {
+
+      margin-bottom: 1em;
+
+      small {
+
+        display: block;
+
+      }
+
+    }
+
+    a {
+
+      margin-bottom: 1em;
+
+    }
+
+  }
+
+  .product-av-tags {
+
+    @include flexVCenter;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin-top: 1em;
+    margin-bottom: 0;
+
+    li {
+
+      margin-bottom: 15px;
+
+    }
+
+  }
+
+  .product-av-title {
+
+    $margin: .5em 0;
+    font-family: $fontTitle;
+    @include fontStyle(false, 500);
+    margin: $margin;
+    font-size: 1.3em;
+    color: $blue;
+
+  }
+
+  .product-av-subtitle {
+
+    font-size: .9em;
+
+  }
+
+}
+
+.product-av-tag {
+
+  background-color: $grey;
+  color: $black;
+  padding: .3em .8em;
+  font-size: .8em;
+  margin-right: 15px;
+
+  &:hover {
+
+    color: $black;
+
+  }
+
+}

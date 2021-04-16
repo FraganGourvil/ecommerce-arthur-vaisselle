@@ -1,0 +1,76 @@
+.reinsurance-av {
+
+  @include flexVCenter;
+  margin-top: 2em;
+
+  @media screen and (max-width: 992px) {
+
+    flex-direction: column;
+
+  }
+
+  .reinsurance-item-av {
+
+    @include flexVCenter;
+    justify-content: flex-start;
+    max-width: 300px;
+
+    i {
+
+      font-size: 2.7em;
+      color: $blue;
+
+    }
+
+    &:not(:last-of-type) {
+
+
+      @include desktop {
+
+        border-right: 1px solid $grey;
+
+      }
+
+      padding-right: 15px;
+
+    }
+
+    &:not(:first-of-type) {
+
+      padding-left: 25px;
+
+    }
+
+    @media screen and (max-width: 992px) {
+
+      padding: 0 !important;
+      margin-bottom: 2em;
+
+    }
+
+    .reinsurance-item-content {
+
+      margin-left: .5em;
+
+      h6 {
+
+        font-weight: 500;
+        margin-bottom: .1em;
+
+      }
+
+      em {
+
+        display: block;
+        color: $dgrey;
+        font-size: .8em;
+        line-height: 15px;
+
+      }
+
+    }
+
+
+  }
+
+}

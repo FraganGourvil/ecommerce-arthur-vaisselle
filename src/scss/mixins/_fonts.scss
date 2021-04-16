@@ -1,0 +1,9 @@
+@mixin fontStyle($toUpper, $weight) {
+
+  font-weight: $weight;
+  @if $toUpper {
+    text-transform: uppercase;
+  }
+
+
+}

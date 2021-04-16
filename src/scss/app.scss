@@ -1,0 +1,73 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,900;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+/*
+font-family: 'Lora', serif;
+ */
+
+
+/*
+|--------------------------------------------------------------------------
+| MIXIN SCSS
+|--------------------------------------------------------------------------
+*/
+
+@import 'mixins/adaptative';
+@import 'mixins/breakpoints';
+@import 'mixins/fonts';
+@import 'mixins/flex';
+
+/*
+|--------------------------------------------------------------------------
+| BASE SCSS
+|--------------------------------------------------------------------------
+*/
+
+@import 'base/var';
+@import 'base/normalize';
+@import 'base/container';
+
+/*
+|--------------------------------------------------------------------------
+| PARTIALS LAYOUTS SCSS
+|--------------------------------------------------------------------------
+*/
+
+@import 'layouts/header/normalize';
+@import 'layouts/header/nav-tools';
+@import 'layouts/header/nav-menu';
+@import 'layouts/header/dropdown-menu';
+@import 'layouts/footer';
+@import 'layouts/breadcrumb';
+@import 'layouts/section';
+@import 'layouts/text';
+
+/*
+|--------------------------------------------------------------------------
+| PAGES SCSS
+|--------------------------------------------------------------------------
+*/
+
+@import 'pages/home';
+@import 'pages/product';
+@import 'pages/products';
+@import 'pages/inspiration';
+
+/*
+|--------------------------------------------------------------------------
+| MODULES SCSS
+|--------------------------------------------------------------------------
+*/
+
+@import 'modules/button';
+@import 'modules/alert';
+@import 'modules/form';
+@import 'modules/slideshow';
+@import 'modules/menu';
+@import 'modules/animations';
+@import 'modules/like';
+@import 'modules/reinsurance';
+@import 'modules/slider';
+@import "modules/advantage";
+@import "modules/search";
